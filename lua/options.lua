@@ -1,0 +1,17 @@
+vim.o.rnu=true
+vim.o.number=true
+vim.cmd([[set viminfo+=f0]])
+vim.o.hlsearch=true
+vim.bo.softtabstop= 4
+vim.bo.tabstop=4
+vim.bo.shiftwidth=4
+vim.bo.expandtab=true
+vim.o.ignorecase=true
+vim.o.showmatch=true
+vim.opt.encoding="utf-8"
+vim.opt.termguicolors=true
+vim.opt.mouse="a"
+vim.opt.scrolloff=8
+vim.opt.sidescrolloff=8
+vim.o.swapfile=false
+vim.o.clipboard ="unnamedplus"
