@@ -1,7 +1,6 @@
 local telescope = require('telescope')
 telescope.setup{
 	defaults = {
-		-- ...
 	},
 	pickers = {
 		find_files = {
@@ -17,6 +16,7 @@ telescope.setup{
 			theme = "dropdown",
 		},
 	},
+
 	extensions = {
 	}
 }

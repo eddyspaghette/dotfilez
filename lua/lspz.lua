@@ -1,12 +1,26 @@
 -- Neovim Completion
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 local cmp = require'cmp'
 local luasnip = require'luasnip'
+local lspkind = require('lspkind')
 cmp.setup({
-    snippet = {
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = 'symbol_text', -- show only symbol annotations
+			maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+
+			-- The function below will be called before any actual modifications from lspkind
+			-- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+			-- before = function (entry, vim_item)
+			-- 	...
+			-- 	return vim_item
+			-- end
+		})
+	},
+	snippet = {
         expand = function(args)
             require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         end,
@@ -68,9 +82,6 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local lspconfig = require('lspconfig')
 
 local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set("n", "<leader>x", "<cmd>Telescope diagnostics<cr>", bufopts)
 
 local on_attach = function(client, bufnr)
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -94,8 +105,40 @@ lspconfig.sumneko_lua.setup{
 }
 
 -- Go LSP
--- lspconfig.gopls.setup{
---     capabilities = capabilities,
---     on_attach = on_attach
--- }
+lspconfig.gopls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+-- Python LSP
+lspconfig.pyright.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+--Docker LSP
+lspconfig.dockerls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+--LaTex LSP
+lspconfig.texlab.setup{
+    filetypes = { 'plaintex', 'tex', 'bib'},
+    capabilities = capabilities,
+    on_attach = on_attach,
+		settings = {
+			texlab = {
+				rootDirectory = nil,
+				build = {
+					executable = 'tectonic',
+					args = { '%f' },
+					onSave = true,
+					-- forwardSearchAfter = true,
+			},
+			-- forwardSearch = {
+			-- 	executable = 'zathura',
+			-- 	args = { '%p' },
+			-- },
+		}
+	},
+}
+
 

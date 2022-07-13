@@ -13,8 +13,14 @@ return require('packer').startup(function()
 		'catppuccin/nvim',
 		as = 'catppuccin'
 	})
-	-- Indentation & Blankspace
+	-- Aesthetics
 	use "lukas-reineke/indent-blankline.nvim"
+	use "onsails/lspkind.nvim"
+	use 'kyazdani42/nvim-web-devicons'
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true}
+	}
 
 	-- Functionality
 	use 'tpope/vim-commentary'
@@ -23,6 +29,12 @@ return require('packer').startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',
 		{'nvim-treesitter/nvim-treesitter-textobjects'}
+	}
+	use 'voldikss/vim-floaterm' --floating terminal
+
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
 	}
 
 
@@ -40,10 +52,18 @@ return require('packer').startup(function()
 		'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/nvim-cmp',
-		{
-			"windwp/nvim-autopairs",
-			config = function() require("nvim-autopairs").setup {} end
-		}
+	}
+
+	-- Markdown
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+
+	-- FZF
+	use {
+		'junegunn/fzf', run = 'fzf#install()',
+		{'junegunn/fzf.vim'}
 	}
 
 	-- Telescope

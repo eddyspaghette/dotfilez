@@ -1,6 +1,7 @@
 vim.o.rnu=true
 vim.o.number=true
 vim.cmd([[set viminfo+=f0]])
+vim.o.guicursor=""
 vim.o.hlsearch=true
 vim.bo.softtabstop= 4
 vim.bo.tabstop=4

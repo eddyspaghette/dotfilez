@@ -1,9 +1,8 @@
 require('pluginz') -- load plugins
--- LSP
 
+-- LSP
 require('lsp_installerz') -- LSP installer config
 require('lspz') -- setup LSP completion & LSP config
-require('autopairz') --setup for autopair completion, brackets
 
 -- Snippets
 require('luasnipz') -- LuaSnip config
@@ -17,11 +16,16 @@ require('colors') -- colorscheme & misc
 require('keymapz') -- keybindings
 require('options') -- load option
 require('treesitter') -- highlight, textobjects
+require('autopairz') -- bracket pairing
 
 
 -- Misc [Aesthetic]
 require('indent')
+require('lualinez')
 
 --Telescope
 require('telescopez')
+
+--Markdown
+require('markdownz')
 

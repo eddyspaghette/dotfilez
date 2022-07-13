@@ -1,13 +1,23 @@
 cursor:
   style: Underline
-  unfocused_hollow: true
   thickness: 0.15
+  vi_mode_style:
+    shape: Underline
+    thickness: 0.15
 
 window:
-  opacity: 0.82
+  opacity: 0.90
   dimensions:
     columns: 133
     lines: 40
+
+  # buttonless, transparent
+  decorations: buttonless
+
+  padding:
+    x: 15
+    y: 15
+  dynamic_padding: true
 
 # Font configuration (changes require restart)
 font:
@@ -32,20 +42,17 @@ font:
     style: Regular
 
   # Point size
-  size: 20.0
+  size: 18.0
 
 # Offset is the extra space around each character. `offset.y` can be thought of
 # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-    x: 0 
-    y: 0 
+    x: 0
+    y: 0
 
 # Thin stroke font  (macOS only)
   use_thin_strokes: true
 
-  window:
-    opacity: 0.1
-    decorations: none
 r_schemes:
   latte: &latte
 
@@ -376,4 +383,23 @@ r_schemes:
     indexed_colors:
       - { index: 16, color: '#FAB387' }
       - { index: 17, color: '#F5E0DC' }
-colors: *latte
+        # latte macchiato mocha frappe
+colors: *macchiato
+
+
+# Tmux keybindings (MacOS)
+# Select window 1-9
+key_bindings:
+  - { key : Key1, mods: Command, chars: "\x02\x31" }
+  - { key : Key2, mods: Command, chars: "\x02\x32" }
+  - { key : Key3, mods: Command, chars: "\x02\x33" }
+  - { key : Key4, mods: Command, chars: "\x02\x34" }
+  - { key : Key5, mods: Command, chars: "\x02\x35" }
+  - { key : Key6, mods: Command, chars: "\x02\x36" }
+  - { key : Key7, mods: Command, chars: "\x02\x37" }
+  - { key : Key8, mods: Command, chars: "\x02\x38" }
+  - { key: T, mods: Command, chars: "\x02c" }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
+  - { key: W, mods: Command, chars: "\x02x" }
+
