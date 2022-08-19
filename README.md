@@ -1,0 +1,2 @@
+# dotfilez
+tmux, nvim, alacritty
