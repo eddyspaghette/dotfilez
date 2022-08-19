@@ -93,6 +93,13 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, bufopts)
 end
 
+-- Emmet LSP
+lspconfig.emmet_ls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "html", "css", "scss", "typescriptreact", "javascriptreact" },
+}
+
 -- Python LSP
 lspconfig.pyright.setup{
     capabilities = capabilities,
