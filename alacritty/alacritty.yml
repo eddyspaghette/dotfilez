@@ -6,7 +6,7 @@ cursor:
     thickness: 0.15
 
 window:
-  opacity: 0.90
+  opacity: 0.50
   dimensions:
     columns: 133
     lines: 40
@@ -15,30 +15,38 @@ window:
   decorations: buttonless
 
   padding:
-    x: 15
-    y: 15
+    x: 10
+    y: 10
   dynamic_padding: true
 
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
   normal:
-    family: RobotoMono Nerd Font
-    style: Regular
+    # family: RobotoMono Nerd Font
+    # style: Regular
+    family: Iosevka Nerd Font Mono
+    style: Light
 
   # Bold font face
   bold:
-    family: RobotoMono Nerd Font
-    style: Regular
+    # family: RobotoMono Nerd Font
+    # style: Regular
+    family: Iosevka Nerd Font Mono
+    style: Bold
 
   # Italic font face
   italic:
-    family: RobotoMono Nerd Font
+    # family: RobotoMono Nerd Font
+    # style: Regular
+    family: Iosevka Nerd Font Mono
     style: Regular
 
   # Bold italic font face
   bold_italic:
-    family: RobotoMono Nerd Font
+    # family: RobotoMono Nerd Font
+    # style: Regular
+    family: Iosevka Nerd Font Mono
     style: Regular
 
   # Point size
@@ -50,8 +58,14 @@ font:
     x: 0
     y: 0
 
-# Thin stroke font  (macOS only)
-  use_thin_strokes: true
+# Thin stroke font  (macOS only) // seems depreciated?
+  # use_thin_strokes: true
+
+
+# Color Themes
+#
+import:
+  - ~/.alacritty-colorscheme/themes/darcula.yaml
 
 r_schemes:
   latte: &latte
@@ -384,7 +398,8 @@ r_schemes:
       - { index: 16, color: '#FAB387' }
       - { index: 17, color: '#F5E0DC' }
         # latte macchiato mocha frappe
-colors: *macchiato
+        #
+# colors: *mocha
 
 
 # Tmux keybindings (MacOS)

@@ -97,8 +97,16 @@ end
 lspconfig.emmet_ls.setup{
     capabilities = capabilities,
     on_attach = on_attach,
-    filetypes = { "html", "css", "scss", "typescriptreact", "javascriptreact" },
+    filetypes = { "html", "css", "scss", "javascript", "typescriptreact", "javascriptreact" },
 }
+
+-- TSS
+-- lspconfig.tsserver.setup{
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+--     filetypes = { "html", "css", "scss", "javascript", "typescriptreact", "javascriptreact" },
+-- }
+
 
 -- Python LSP
 lspconfig.pyright.setup{
@@ -106,10 +114,10 @@ lspconfig.pyright.setup{
     on_attach = on_attach
 }
 -- Lua LSP
-lspconfig.sumneko_lua.setup{
-    capabilities = capabilities,
-    on_attach = on_attach
-}
+-- lspconfig.sumneko_lua.setup{
+--     capabilities = capabilities,
+--     on_attach = on_attach
+-- }
 
 -- Go LSP
 lspconfig.gopls.setup{

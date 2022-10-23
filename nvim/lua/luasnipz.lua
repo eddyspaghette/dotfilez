@@ -33,4 +33,14 @@ end, { silent = true })
 
 
 -- friendly snippets
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
+luasnip.filetype_extend("javascript", { "javascriptreact" })
+luasnip.filetype_extend("javascript", { "html" })
+
+--Custom snippets
+require("luasnip.loaders.from_lua").load({paths="~/.config/nvim/luasnippets"})
+-- require("luasnip.loaders.from_lua").load()
+-- luasnip.filetype_extend("tex", { "plaintex" })
+
+
+

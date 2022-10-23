@@ -14,12 +14,13 @@ vim.cmd[[function! CustomFoldText()
 
   return expansionString . foldLevelStr . foldSizeStr
 endfunction]]
+vim.cmd[[let g:tex_flavor = "latex"]]
 vim.cmd[[set foldtext=CustomFoldText()]]
 vim.o.guicursor=""
 vim.o.hlsearch=true
-vim.bo.softtabstop= 4
-vim.bo.tabstop=4
-vim.bo.shiftwidth=4
+vim.bo.softtabstop=2
+vim.bo.tabstop=2
+vim.bo.shiftwidth=2
 vim.bo.expandtab=true
 vim.o.ignorecase=true
 vim.o.showmatch=true

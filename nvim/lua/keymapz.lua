@@ -31,6 +31,7 @@ map("n", "<leader>t", "<cmd>FloatermNew --opener=drop --height=0.95 --width=0.95
 map("n", "<leader>bp", "<cmd>FloatermNew --autoclose=0 --height=0.7 --width=0.7 python3 %<cr>", defaults)
 map("n", "<leader>bg", "<cmd>FloatermNew --autoclose=0 --height=0.7 --width=0.7 go run %<cr>", defaults)
 map("n", "<leader>bc", "<cmd>FloatermNew --autoclose=0 --height=0.7 --width=0.7 gcc % -o %< && ./%< <cr>", defaults)
+map("n", "<leader>bn", "<cmd>FloatermNew --autoclose=0 --height=0.7 --width=0.7 node % <cr>", defaults)
 map("n", "<leader>bt", "<cmd>FloatermNew --height=0.7 --width=0.7 tectonic % && open %:r.pdf <cr>", defaults)
 map("n", "<leader>g", "<cmd>FloatermNew --height=0.95 --width=0.95 lazygit<cr>", defaults)
 map("n", "<leader>o", "<cmd>%bd|e#|bd#<cr>", defaults)

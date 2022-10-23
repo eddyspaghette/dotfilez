@@ -13,6 +13,9 @@ return require('packer').startup(function()
 		'catppuccin/nvim',
 		as = 'catppuccin'
 	})
+	use "EdenEast/nightfox.nvim"
+    use ({ 'projekt0n/github-nvim-theme' })
+
 	-- Aesthetics
 	use "lukas-reineke/indent-blankline.nvim"
 	use "onsails/lspkind.nvim"
@@ -25,11 +28,13 @@ return require('packer').startup(function()
 	-- Functionality
 	use 'tpope/vim-commentary'
 	use 'tpope/vim-surround'
+
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',
 		{'nvim-treesitter/nvim-treesitter-textobjects'}
 	}
+
 	use 'voldikss/vim-floaterm' --floating terminal
 
 	use {
