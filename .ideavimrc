@@ -1,23 +1,63 @@
+# Default Settings
 inoremap jk <ESC>
-set rnu
-set number
+inoremap <TAB> %
 set surround
-set highlighted-yank
-set multiple-cursors
 set commentary
-set exchange
-let mapleader=","
-nnoremap <TAB> %
-vnoremap <leader>y "+y"
-nnoremap > $
-nnoremap < ^
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+set highlightedyank
+set multiple-cursors
+set ideajoin
+let mapleader = ","
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+
+# Window Navigation
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c-"> :action SplitHorizontally<CR>
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+nnoremap ]b :action PreviousTab<CR>
+nnoremap [b :action NextTab<CR>
+nnoremap <leader>m :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>nf :action NewGroup<CR>
+nnoremap <leader>en :action EditSourceInNewWindow<CR>
+nnoremap <leader>q :action CloseContent<CR>
+nnoremap <leader>qa :action CloseAllEditors<CR>
+
+# Tool Windows
+nnoremap <leader>xx :action ActivateProblemsViewToolWindow<CR>
+nnoremap <leader>r :action ActivateRunToolWindow<CR>
+nnoremap <leader>d :action ActivateDebugToolWindow<CR>
+nnoremap <leader>c :action HideAllWindows<CR>
+
+# Search
+set incsearch
+nnoremap <leader>ff :action SearchEverywhere<CR>
+nnoremap <leader>fu :action FindUsages<CR>
+nnoremap <leader>fU :action FindUsagesInFile<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fl :action RecentLocations<CR>
+nnoremap <leader>fh :action LocalHistory.ShowHistory<CR>
+
+# Editing
+vnoremap < <gv
+vnoremap > >gv
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+
+# Code Navigation
+nnoremap <leader>hh :action ActivateHierarchyToolWindow<CR>
+nnoremap <leader>hc :action CallHierarchy<CR>
+nnoremap <leader>hc :action MethodHierarchy<CR>
+nnoremap <leader>ht :action TypeHierarchy<CR>
+nnoremap <leader>b :action ShowNavBar<CR>
+
+# Plugins
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
 nmap g<C-n> <Plug>NextOccurrence
