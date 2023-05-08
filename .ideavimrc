@@ -1,33 +1,44 @@
 # Default Settings
 inoremap jk <ESC>
+map <C-c> <ESC>
 inoremap <TAB> %
 set surround
 set commentary
+set ignorecase
 set highlightedyank
 set multiple-cursors
 set ideajoin
+set visualbell
 let mapleader = ","
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 
 # Window Navigation
+nnoremap <leader>v :action ShowNavBar<CR>
+
+# Build and Debugging
 nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c-"> :action SplitHorizontally<CR>
-nnoremap <TAB> :action PreviousTab<CR>
-nnoremap <s-TAB> :action NextTab<CR>
-nnoremap ]b :action PreviousTab<CR>
-nnoremap [b :action NextTab<CR>
-nnoremap <leader>m :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap ]b :action NextTab<CR>
+nnoremap [b :action PreviousTab<CR>
 nnoremap <leader>nf :action NewGroup<CR>
+nnoremap <leader>a :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <leader>en :action EditSourceInNewWindow<CR>
 nnoremap <leader>q :action CloseContent<CR>
 nnoremap <leader>qa :action CloseAllEditors<CR>
 
+# Build and Debugging
+
 # Tool Windows
-nnoremap <leader>xx :action ActivateProblemsViewToolWindow<CR>
-nnoremap <leader>r :action ActivateRunToolWindow<CR>
-nnoremap <leader>d :action ActivateDebugToolWindow<CR>
+nnoremap <leader>X :action ActivateProblemsViewToolWindow<CR>
+nnoremap <leader>R :action ActivateRunToolWindow<CR>
+nnoremap <leader>D :action ActivateDebugToolWindow<CR>
+nnoremap <leader>S :action ActivateStructureToolWindow<CR>
+nnoremap <leader>G :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>s :action SplittingTabsToolWindow.MoveTabRight<CR>
 nnoremap <leader>c :action HideAllWindows<CR>
 
 # Search
@@ -38,8 +49,26 @@ nnoremap <leader>fU :action FindUsagesInFile<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 nnoremap <leader>fl :action RecentLocations<CR>
 nnoremap <leader>fh :action LocalHistory.ShowHistory<CR>
+# Code Navigation
+nnoremap <leader>hh :action ActivateHierarchyToolWindow<CR>
+nnoremap <leader>hc :action CallHierarchy<CR>
+nnoremap <leader>hm :action MethodHierarchy<CR>
+nnoremap <leader>ht :action TypeHierarchy<CR>
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gr :action GotoRelated<CR>
+nnoremap gs :action GotoSymbol<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gS :action GotoSuperMethod<CR>
+nnoremap gt: action GotoTest<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
 
 # Editing
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap [[ :action MethodUp<CR>
@@ -50,12 +79,17 @@ nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 
-# Code Navigation
-nnoremap <leader>hh :action ActivateHierarchyToolWindow<CR>
-nnoremap <leader>hc :action CallHierarchy<CR>
-nnoremap <leader>hc :action MethodHierarchy<CR>
-nnoremap <leader>ht :action TypeHierarchy<CR>
-nnoremap <leader>b :action ShowNavBar<CR>
+#Bookmarks
+nnoremap <C-k> :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <C-m> :action ToggleBookmark<CR>
+
+
+
+
+# Build and Debugging
+nnoremap <leader>Bc :action ChooseRunConfiguration<CR>
+nnoremap <leader>Br :action Rerun<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
 
 # Plugins
 nmap <C-n> <Plug>NextWholeOccurrence
