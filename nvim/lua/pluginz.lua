@@ -42,6 +42,7 @@ return require('packer').startup(function()
 		config = function() require("nvim-autopairs").setup {} end
 	}
 	use 'mg979/vim-visual-multi'
+	use 'mbbill/undotree'
 
 
 	-- Snippets
@@ -81,6 +82,9 @@ return require('packer').startup(function()
 
 	-- Telescope Extensions
 	use 'jvgrootveld/telescope-zoxide'
+
+  -- D2 / Terrastruct
+  use 'terrastruct/d2-vim'
 
 
 

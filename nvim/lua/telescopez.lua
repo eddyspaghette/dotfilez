@@ -2,6 +2,9 @@ local telescope = require('telescope')
 telescope.setup{
 	defaults = {
 	},
+	mappings = {
+		["<C-d>"] = require('telescope.actions').delete_buffer,
+	},
 	pickers = {
 		find_files = {
 			theme = "dropdown"

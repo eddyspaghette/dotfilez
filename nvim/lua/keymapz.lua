@@ -6,6 +6,8 @@ map("i", "jk", "<esc>", defaults)
 map("n", ">", "$", defaults)
 map("n", "<", "^", defaults)
 map("v", "<leader>y", '"+y', defaults)
+map("v", "J", ":m '>+1<CR>gv=gv", defaults)
+map("v", "K", ":m '<-2<CR>gv=gv", defaults)
 map("n", "[b", ":bp<cr>", defaults)
 map("n", "]b", ":bn<cr>", defaults)
 map("n", "[w", "<C-w>h", defaults)
@@ -36,6 +38,7 @@ map("n", "<leader>bt", "<cmd>FloatermNew --height=0.7 --width=0.7 tectonic % && 
 map("n", "<leader>g", "<cmd>FloatermNew --height=0.95 --width=0.95 lazygit<cr>", defaults)
 map("n", "<leader>o", "<cmd>%bd|e#|bd#<cr>", defaults)
 map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", defaults)
+map("n", "<leader>u", "<cmd>UndotreeToggle<cr>", defaults)
 
 
 
