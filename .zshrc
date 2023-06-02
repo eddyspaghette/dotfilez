@@ -24,7 +24,6 @@ ZSH_THEME="lambda"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-eval "$(zoxide init zsh)"
 plugins=(git zsh-autosuggestions web-search copypath copyfile dirhistory zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -233,3 +232,4 @@ ex=:\
 *.nix=:\
 "
 export LC_ALL=en_US.UTF-8
+eval "$(zoxide init zsh)"
