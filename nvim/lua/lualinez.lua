@@ -30,7 +30,8 @@ local bubbles_theme = {
 
 require('lualine').setup {
 	options = {
-    theme = 'seoul256',
+    -- theme = 'seoul256',
+    theme = 'nord',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

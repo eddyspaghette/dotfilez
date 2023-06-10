@@ -57,6 +57,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER="~~"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export EDITOR=$(which nvim)
+export VISUAL=$(which nvim)
+export TERM='xterm-256color'
 export PATH=$PATH:/usr/local/Cellar/openvpn/2.5.7/sbin
 alias openjdk="/usr/local/opt/openjdk/bin"
 

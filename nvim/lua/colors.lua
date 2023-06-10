@@ -1,7 +1,8 @@
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↵")
+-- vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("eol:↵")
 
-vim.cmd[[colorscheme github_dark_high_contrast]]
+-- vim.cmd[[colorscheme github_dark_high_contrast]]
+vim.cmd[[colorscheme nord]]
 -- vim.cmd[[hi Normal guibg=None ctermbg=None]]
 -- vim.cmd[[hi LineNr guibg=None ctermbg=None]]
 -- vim.cmd[[hi Folded guibg=None ctermbg=None]]

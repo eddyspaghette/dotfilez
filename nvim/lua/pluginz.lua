@@ -14,7 +14,9 @@ return require('packer').startup(function()
 		as = 'catppuccin'
 	})
 	use "EdenEast/nightfox.nvim"
-    use ({ 'projekt0n/github-nvim-theme' })
+	use ({ 'projekt0n/github-nvim-theme' })
+	-- If you are using Packer
+	use 'shaunsingh/nord.nvim'
 
 	-- Aesthetics
 	use "lukas-reineke/indent-blankline.nvim"

@@ -6,7 +6,7 @@ cursor:
     thickness: 0.15
 
 window:
-  opacity: 0.75
+  opacity: 0.85
   dimensions:
     columns: 133
     lines: 40
