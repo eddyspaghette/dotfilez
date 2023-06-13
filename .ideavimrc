@@ -87,9 +87,9 @@ nnoremap <C-m> :action ToggleBookmark<CR>
 
 
 # Build and Debugging
-nnoremap <leader>Bc :action ChooseRunConfiguration<CR>
-nnoremap <leader>Br :action Rerun<CR>
-nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+nnoremap <leader>b :action ChooseRunConfiguration<CR>
+# nnoremap <leader> :action Rerun<CR>
+nnoremap <leader>B :action ToggleLineBreakpoint<CR>
 
 # Plugins
 nmap <C-n> <Plug>NextWholeOccurrence

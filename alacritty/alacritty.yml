@@ -1,8 +1,8 @@
 cursor:
-  style: Underline
+  style: Block
   thickness: 0.15
   vi_mode_style:
-    shape: Underline
+    shape: Block
     thickness: 0.15
 
 window:
