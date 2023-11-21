@@ -9,6 +9,7 @@ set highlightedyank
 set multiple-cursors
 set ideajoin
 set visualbell
+set easymotion
 let mapleader = ","
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
