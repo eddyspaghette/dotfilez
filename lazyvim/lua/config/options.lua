@@ -9,3 +9,4 @@ vim.g.mapleader = ","
 vim.opt.cursorlineopt = "number"
 -- no swapfile
 vim.o.swapfile = false
+vim.opt.clipboard = ""
