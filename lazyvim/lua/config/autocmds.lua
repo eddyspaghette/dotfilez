@@ -7,6 +7,11 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "java",
   command = "setlocal shiftwidth=4 tabstop=4",
 })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "Indents",
+  pattern = "cpp",
+  command = "setlocal shiftwidth=4 tabstop=4",
+})
 -- Transparency
 -- vim.api.nvim_create_augroup("BG", { clear = true })
 -- vim.api.nvim_create_autocmd("BufEnter", {

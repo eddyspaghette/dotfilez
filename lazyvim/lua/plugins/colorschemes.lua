@@ -14,6 +14,7 @@ return {
     -- colorscheme = "onedark_dark"
   },
   config = function()
+    require("rose-pine").setup({ disable_italics = true })
     vim.cmd("colorscheme rose-pine-moon")
   end,
 }

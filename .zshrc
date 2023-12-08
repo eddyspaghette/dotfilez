@@ -42,6 +42,7 @@ alias tmuxconf="nvim ~/.tmux.conf"
 alias t="tmux new -s"
 alias ta="tmux a -t"
 alias tls="tmux ls"
+alias tk="tmux kill-session -t"
 alias tks="tmux kill-server"
 
 
@@ -77,6 +78,8 @@ eval "$(zoxide init zsh)"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export C_INCLUDE_PATH="/usr/local/include:$CI_INCLUDE_PATH"
+export CPLUS_INCLUDE_PATH="/usr/local/include:$CPLUS_INCLUDE_PATH"
 
 
 #RUBY

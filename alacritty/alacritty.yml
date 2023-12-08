@@ -7,6 +7,10 @@ cursor:
   #   shape: Block
   #   thickness: 0.15
 
+scrolling:
+  history: 100000
+  multiplier: 3
+
 window:
   opacity: 1
   dimensions:
@@ -157,3 +161,4 @@ key_bindings:
   - { key: Right, mods: Alt, chars: "\x1BF" }
   - { key: Left, mods: Alt, chars: "\x1BB" }
   - { key: W, mods: Command, chars: "\x02x" }
+  - { key: F, mods: Control, chars: "\x02f" }
