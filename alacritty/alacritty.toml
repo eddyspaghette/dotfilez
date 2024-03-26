@@ -1,0 +1,42 @@
+[shell]
+# program = "wsl"
+
+[env]
+TERM = "alacritty"
+
+[window]
+dimensions = { columns = 150, lines = 80 }
+padding = { x = 0, y = 0 }
+opacity = 0.9
+blur = true
+title = "workspace"
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+normal = { family = "GohuFont 14 Nerd Font Mono", style = "Regular" }
+bold = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
+italic = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
+size = 14
+# offset is the extra space between characters, y = line spacing, x is letter spacing
+offset = { x = 0, y = 0 }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+vi_mode_style = { shape = "Beam", blinking = "On" }
+
+[keyboard]
+bindings = [
+  #unicode escape codes
+  { key = "Key1", mods = "Alt", chars = "\u0002\u0031" },
+  { key = "Key2", mods = "Alt", chars = "\u0002\u0032" },
+  { key = "Key3", mods = "Alt", chars = "\u0002\u0033" },
+  { key = "Key4", mods = "Alt", chars = "\u0002\u0034" },
+  { key = "Key5", mods = "Alt", chars = "\u0002\u0035" },
+  { key = "Key6", mods = "Alt", chars = "\u0002\u0036" },
+  { key = "T", mods = "Alt", chars = "\u0002c" },
+  { key = "W", mods = "Alt", chars = "\u0002x" },
+  { key = "F", mods = "Alt", chars = "\u0002f" },
+]
