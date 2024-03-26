@@ -92,6 +92,21 @@ end
 vim.keymap.set("n", "<leader>rc", "<cmd>lua _c_toggle()<cr>")
 vim.keymap.set("t", "<leader>rc", "<cmd>lua _c_toggle()<cr>")
 
+--- Java
+function _j_toggle()
+  local j = Terminal:new({
+    name = "Java",
+    cmd = "javac" .. " " .. get_current_file() .. " && java " .. get_filename_noext(),
+    close_on_exit = false,
+    direction = "float",
+    go_back = 0,
+  })
+  j:toggle()
+end
+
+vim.keymap.set("n", "<leader>rj", "<cmd>lua _j_toggle()<cr>")
+vim.keymap.set("t", "<leader>rj", "<cmd>lua _j_toggle()<cr>")
+
 -- Zoxide
 vim.keymap.set("n", "<leader>cd", require("telescope").extensions.zoxide.list)
 
