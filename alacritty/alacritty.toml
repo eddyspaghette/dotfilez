@@ -1,5 +1,5 @@
 [shell]
-program = "wsl"
+# program = "wsl"
 
 [env]
 TERM = "alacritty"
