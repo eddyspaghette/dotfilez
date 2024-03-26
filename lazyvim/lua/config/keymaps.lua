@@ -135,3 +135,9 @@ vim.keymap.set("n", "<leader>wL", require("smart-splits").swap_buf_left)
 vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
 -- vim.keymap.set("n", "<leader>wk", require("smart-splits").swap_buf_up)
 -- vim.keymap.set("n", "<leader>wl", require("smart-splits").swap_buf_right)
+--
+
+-- DiffView
+vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>")
+vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>")
+-- vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
