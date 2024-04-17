@@ -23,7 +23,7 @@ end
 
 local function get_filename_noext()
   local full_path = vim.api.nvim_buf_get_name(0)
-  return string.gsub(full_path, "%.cpp$", "")
+  return string.gsub(full_path, "%.cc$", "")
 end
 
 function _G.set_terminal_keymaps()
@@ -133,6 +133,8 @@ vim.keymap.set("n", "<C-l>", require("smart-splits").move_cursor_right)
 -- swapping buffers between windows
 vim.keymap.set("n", "<leader>wL", require("smart-splits").swap_buf_left)
 vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
+vim.keymap.set("n", "<leader>wL", require("smart-splits").swap_buf_left)
+vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
 -- vim.keymap.set("n", "<leader>wk", require("smart-splits").swap_buf_up)
 -- vim.keymap.set("n", "<leader>wl", require("smart-splits").swap_buf_right)
 --
@@ -141,3 +143,11 @@ vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>")
 vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>")
 -- vim.keymap.set("n", "<leader>wJ", require("smart-splits").swap_buf_down)
+--
+-- LSP Keymaps
+vim.keymap.set("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>")
+
+-- CompetiTest Keymaps
+vim.keymap.set("n", "<leader>rr", "<cmd>CompetiTest run<cr>")
+vim.keymap.set("n", "<leader>ra", "<cmd>CompetiTest add_testcase<cr>")
+vim.keymap.set("n", "<leader>rd", "<cmd>CompetiTest delete_testcase<cr>")

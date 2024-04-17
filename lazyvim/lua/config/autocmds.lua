@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   group = "Indents",
   pattern = "cpp",
-  command = "setlocal shiftwidth=4 tabstop=4",
+  command = "setlocal shiftwidth=2 tabstop=2",
 })
 -- Transparency
 -- vim.api.nvim_create_augroup("BG", { clear = true })
