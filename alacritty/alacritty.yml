@@ -40,10 +40,10 @@ font:
     # style: Regular
     # family: FixedsysModernV05 Nerd Font Mono
     # Style: Book
-    family: JetBrainsMono Nerd Font Mono
-    Style: Regular
-    # family: UbuntuMono Nerd Font Mono
+    # family: JetBrainsMono Nerd Font Mono
     # Style: Regular
+    family: UbuntuMono Nerd Font Mono
+    Style: Regular
     # family: Terminess Nerd Font
     # style: Regular
     # style: Book
@@ -72,10 +72,10 @@ font:
     # style: Regular
     # family: Monofur Nerd Font Mono
     # style: Bold
-    # family: UbuntuMono Nerd Font Mono
-    # Style: Bold
-    family: JetBrainsMono Nerd Font Mono
-    Style: Italic
+    family: UbuntuMono Nerd Font Mono
+    Style: Bold
+    # family: JetBrainsMono Nerd Font Mono
+    # Style: Italic
     # family: CozetteVector
     # style: Medium
     # family: TamzenForPowerline
@@ -97,10 +97,10 @@ font:
     # style: Italic
     # family: Monofur Nerd Font Mono
     # style: Italic
-    # family: UbuntuMono Nerd Font Mono
-    # style: Italic
-    family: JetBrainsMono Nerd Font Mono
-    Style: Italic
+    family: UbuntuMono Nerd Font Mono
+    style: Italic
+    # family: JetBrainsMono Nerd Font Mono
+    # Style: Italic
     # family: TamzenForPowerline
     # style: Medium
 
@@ -117,10 +117,10 @@ font:
     # Style: Book
     # family: Terminess Nerd Font Mono
     # style: Bold Italic
-    # family: UbuntuMono Nerd Font Mono
-    # style: Bold Italic
-    family: JetBrainsMono Nerd Font Mono
-    Style: Bold Italic
+    family: UbuntuMono Nerd Font Mono
+    style: Bold Italic
+    # family: JetBrainsMono Nerd Font Mono
+    # Style: Bold Italic
     # style: Bold
     # family: GohuFont 14 Nerd Font Mono
     # style: Regular
