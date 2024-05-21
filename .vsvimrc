@@ -1,3 +1,5 @@
+" Put in %USERPROFILE% for context, needs VSVim (VS 2022)
+
 let mapleader = ' '
 
 map gi :vsc Edit.GoToImplementation<CR>
