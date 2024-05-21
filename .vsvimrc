@@ -1,0 +1,10 @@
+let mapleader = ' '
+
+map gi :vsc Edit.GoToImplementation<CR>
+map gr :vsc Edit.FindAllReferences<CR>
+map gp :vsc Edit.PeekDefinition<CR>
+
+nnoremap <leader>x :vsc View.NextError<CR>
+nnoremap <leader>X :vsc View.PreviousError<CR>
+
+nnoremap <leader>r :vsc Refactor.Rename<CR>
