@@ -1,25 +1,45 @@
+import = ["~/.config/alacritty/rose-pine.toml"]
+
 [shell]
-# program = "wsl"
+program = "wsl"
 
 [env]
 TERM = "alacritty"
 
 [window]
 dimensions = { columns = 150, lines = 80 }
+# decorations = "None"
 padding = { x = 0, y = 0 }
-opacity = 0.9
+opacity = 1
 blur = true
 title = "workspace"
+
 
 [scrolling]
 history = 100000
 multiplier = 3
 
 [font]
-normal = { family = "GohuFont 14 Nerd Font Mono", style = "Regular" }
-bold = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
-italic = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
-size = 14
+# normal = { family = "GohuFont 14 Nerd Font Mono", style = "Regular" }
+# bold = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
+# italic = { family = "GohuFont 14 Nerd Font Mono", style = "Bold" }
+# normal = { family = "MonaspiceXe Nerd Font Mono", style = "Regular" }
+# bold = { family = "MonaspiceXe Nerd Font Mono", style = "Bold" }
+# italic = { family = "MonaspiceXe Nerd Font Mono", style = "Bold" }
+# normal = { family = "MonaspiceKr Nerd Font Mono", style = "Regular" }
+# bold = { family = "MonaspiceKr Nerd Font Mono", style = "Bold" }
+# italic = { family = "MonaspiceKr Nerd Font Mono", style = "Bold" }
+normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+bold = { family = "Inconsolata Nerd Font Mono", style = "Bold" }
+italic = { family = "Inconsolata Nerd Font Mono", style = "Bold" }
+# normal = { family = "MonaspiceAr Nerd Font Mono", style = "Regular" }
+# bold = { family = "MonaspiceAr Nerd Font Mono", style = "Bold" }
+# italic = { family = "MonaspiceAr Nerd Font Mono", style = "Bold" }
+# normal = { family = "MonaspiceNe Nerd Font Mono", style = "Regular" }
+# bold = { family = "MonaspiceNe Nerd Font Mono", style = "Bold" }
+# italic = { family = "MonaspiceNe Nerd Font Mono", style = "Bold" }
+
+size = 16.0
 # offset is the extra space between characters, y = line spacing, x is letter spacing
 offset = { x = 0, y = 0 }
 
@@ -38,5 +58,5 @@ bindings = [
   { key = "Key6", mods = "Alt", chars = "\u0002\u0036" },
   { key = "T", mods = "Alt", chars = "\u0002c" },
   { key = "W", mods = "Alt", chars = "\u0002x" },
-  { key = "F", mods = "Alt", chars = "\u0002f" },
+  { key = "F", mods = "Control", chars = "\u0002f" },
 ]
